@@ -18,7 +18,12 @@ function desencriptar(){
     ocultarAdelante();
     resultado.textContent = desencriptarTexto(recuperarTexto());
 }
-
+function copiar(){
+    var texto=document.querySelector(".textoresultado");
+    var botonCopiar=document.querySelector(".botoncopiar");
+    navigator.clipboard.writeText(texto.textContent);
+    botonCopiar.textContent="Copiado";
+}
 
 function recuperarTexto(){
     var texto=document.querySelector(".texto");
